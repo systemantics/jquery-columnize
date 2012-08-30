@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<title>Columnizer Demo</title>
+		<style type="text/css">
+			p {
+				line-height: 1.2em;
+				margin: 0 1em 1em 0;
+				text-indent: 1em;
+			}
+			p.continued {
+				text-indent: 0;
+			}
+			li {
+				line-height: 1.2em;
+				margin: 0 1em 0 0;
+			}
+			ul {
+				margin: 1.2em 0 1.2em 1.2em;
+			}
+			ul.continued {
+				margin: 0 0 1.2em 1.2em;
+			}
+			#content {
+				max-height: 1000px;
+				margin-bottom: 1em;
+			}
+			.column {
+				width: 200px;
+				float: left;
+			}
+		</style>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+		<script type="text/javascript" src="jquery.columnize.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				$("#content").columnize({columns: 4, balance: true, dontsplit: "p,li"});
+				$("#tracks").columnize({columns: 2, balance: true});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="content">
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+			<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+			<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+			<p>Lorem ipsum dolor sit amet,
+			<ul>
+				<li>consetetur sadipscing elitr,</li>
+				<li>sed diam nonumy eirmod tempor,</li>
+				<li>invidunt ut labore et dolore magna</li>
+				<li>aliquyam erat, sed diam voluptua.</li>
+				<li>At vero eos et accusam et justo duo dolores et ea rebum.</li>
+			</ul>
+			<p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+			<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+			<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+		</div>
+		<div id="tracks" class="tracks">
+			<span class="here">about us</span> / <span class="divider">areas of work:</span> <a class="" href="/en/web_development">web development</a> / <a class="" href="/en/information_management">information management</a> / <a class="" href="/en/corporate_communications">corporate communications</a> / <a class="" href="/en/research">research</a> / <span class="divider">products: </span> <a class="" href="/en/collector">collector</a> / <a class="" href="/en/safari_view_win">safari view win</a> / <a class="" href="/en/mp4info">mp4info</a> / <span class="divider">references: </span> <a class="" href="/en/websites">websites</a> / <a class="" href="/en/intranet_platforms">intranet platforms</a> / <a class="" href="/en/workflow_support">workflow support</a> / <a class="" href="/en/miscellaneous_works">miscellaneous works</a> /
+		</div>
+	</body>
+</html>
